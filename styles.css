@@ -1,0 +1,84 @@
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-darkblue);
+    color: var(--color-white);
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* template code */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)),
+        url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.light-grey {
+    color: lightgray;
+}
+
+.title-container {
+    margin-top: 4%;
+}
+
+#description {
+    margin-top: 0.5%;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+#survey-form {
+    text-align: left;
+    background: var(--color-darkblue-alpha);
+    border-radius: 0.25rem;
+    padding: 4%;
+    width: 50%;
+    margin-top: 2%;
+}
+
+.btn {
+    margin: 4% 0;
+}
+
+@media(max-width: 991px) {
+
+    #survey-form {
+
+        width: 70%;
+    }
+
+    body {
+        font-size: 1.2rem
+    }
+
+}
+
+@media(max-width:576px) {
+    #survey-form {
+
+        width: 80%;
+    }
+
+
+}
